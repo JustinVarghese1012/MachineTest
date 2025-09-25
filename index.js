@@ -8,6 +8,15 @@ const formValidate = (e) => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  if (
+    !userName.value.trim() ||
+    !userEmail.value.trim() ||
+    !userPswrd.value.trim()
+  ) {
+    alert("Fields cannot be empty");
+    return;
+  }
+
   if (!userName.value.trim()) {
     alert("Name cannot be empty");
     return;
